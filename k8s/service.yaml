@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Service
+metadata:
+  name: goal-tracker-service
+  namespace: goaltracker
+
+spec:
+  selector:
+    app: goal-tracker
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
